@@ -1,0 +1,19 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--name=${localWorkspaceFolderBasename}_dev"],
+  "workspaceFolder": "/engi/app",
+  "remoteUser": "engi",
+  "updateRemoteUserUID": true,
+  "mounts": ["source=${localWorkspaceFolder},target=/engi/app,type=bind"],
+
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "fish"
+  },
+  "extensions": [
+    "mhutchie.git-graph",
+    "ms-azuretools.vscode-docker",
+    "redhat.ansible"
+  ]
+}
